@@ -1,13 +1,13 @@
 #! /bin/bash
 
-if [ $# == 0 ]
+echo "Hello! Please type exit."
+read -p 'bdash> ' inp
+if [ "$inp" == "exit" ]
 then
-    echo "Hey! I need one argument to call ~arg~/dashboard.sh"
-    echo "For example, ~arg~ can be fluent"
-
+    echo "Goodbye!"
+    exit 0
 else
-    echo "Hello! I just call $1/dashboard.sh"
-
-    . $1/dashboard.sh
+    echo "Unknown input '$inp'"
+    echo "exiting"
+    exit 1
 fi
-
